@@ -20,3 +20,18 @@ else {
 const newOptions = options.push("Privacy")
 
 console.log( newOptions )
+
+
+// If you ran this in the console, you noticed it printed: 5 (a number), not the array!
+
+// Why?
+
+// In JavaScript, options.push("Privacy") changes the options array directly in-place.
+// What does .push() hand back (return)? The new total length of the array!
+
+// Here is how you do it properly:
+
+// javascript
+// options.push("Privacy"); // Just add it to the original array!
+// console.log(options);    // ["Account", "Security", "Notifications", "Billing", "Privacy"]
+// console.log(options.length)
