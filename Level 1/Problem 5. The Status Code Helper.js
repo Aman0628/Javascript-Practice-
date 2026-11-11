@@ -27,3 +27,17 @@ console.log(isSuccessStatus(200)); // Should print true
 console.log(isSuccessStatus(201)); // Should print true
 console.log(isSuccessStatus(404)); // Should print false
 console.log(isSuccessStatus(500)); // Should print false
+
+
+
+// In Problem 1: Booleans vs Strings
+
+// You returned ("true") and ("false") inside quotes.
+
+// "true" is a String (text).
+// true (no quotes) is a real Boolean (true/false). In automation, if ("false") actually evaluates to truthy because non-empty strings are considered true in JS! Here is how an SDET writes it cleanly:
+// javascript
+// const isSuccessStatus = (statusCode) => {
+//     // Condition already evaluates to true or false, so return it directly!
+//     return statusCode >= 200 && statusCode <= 299;
+// };

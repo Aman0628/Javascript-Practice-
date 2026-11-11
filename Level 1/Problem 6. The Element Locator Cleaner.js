@@ -15,3 +15,15 @@ const cleanText = ( rawText ) => {
 const message = cleanText("    HeLLOOOO    ").trim().toLowerCase();
 
 console.log(message);
+
+
+
+// In Problem 2: Encapsulation (Hiding the work inside the function)
+
+// You applied .trim().toLowerCase() outside the function. The whole purpose of writing helper functions is so that all the work happens inside the function, keeping your test files clean:
+
+// javascript
+// const cleanText = (rawText) => {
+//     return rawText.trim().toLowerCase(); // Done inside!
+// };
+// console.log(cleanText("    HeLLOOOO    ")); // "helloooo"
